@@ -44,3 +44,13 @@ To validate that a k8s cluster is up, you can run:
 
 ```kubectl get nodes```
 
+## Running something directly from a dockerhub image:
+
+Create a nginx deployment.
+
+```kubectl create deployment nginx --image=nginx```
+
+Tear down the deployment
+```buildoutcfg
+kubectl delete deployment nginx
+```
