@@ -20,3 +20,27 @@ if you see the error
 
 ## Running Minikube
 
+You can run minikube on kvm2 one of two ways:
+
+Specifying minikube each time:
+
+```minikube start --vm-driver kvm2```
+
+Or by setting kvm2 as the default:
+
+```
+minikube config set vm-driver kvm2
+minikube start
+```
+
+Some needed deps will be downloaded and then you should see something like:
+
+```buildoutcfg
+Waiting for cluster to come online ...
+🏄Done! kubectl is now configured to use "minikube"
+```
+
+To validate that a k8s cluster is up, you can run:
+
+```kubectl get nodes```
+
